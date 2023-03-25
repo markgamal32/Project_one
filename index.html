@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        }
+        .section {
+        box-sizing: border-box;
+        float: left;
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid black;
+        position: relative;
+        }
+        .title {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px;
+        border: 1px solid black;
+        }
+        #section1 {
+        background-color: lightblue;
+        }
+        #section1 .title {
+        background-color: blue;
+        color: white;
+        }
+        #section2 {
+        background-color: lightgreen;
+        }
+        #section2 .title {
+        background-color: green;
+        color: white;
+        }
+        #section3 {
+        background-color: lightpink;
+        }
+        #section3 .title {
+        background-color: red;
+        color: white;
+        }
+        @media (min-width: 992px) {
+        .section {
+            width: calc(33.33% - 20px);
+        }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+        .section {
+            width: calc(50% - 20px);
+        }
+        #section3 {
+            width: calc(100% - 20px);
+            clear: both;
+        }
+        }
+        @media (max-width: 767px) {
+        .section {
+            width: calc(100% - 20px);
+        }
+        }
+    </style>
+    </head>
+    <body>
+    <div id="section1" class="section">
+        <div class="title">Chicken</div>
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div id="section2" class="section">
+        <div class="title">Beef</div>
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div id="section3" class="section">
+        <div class="title">Sushi</div>
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    </body>
+    </html>
